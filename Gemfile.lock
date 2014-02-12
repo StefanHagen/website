@@ -29,7 +29,12 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.3)
+    bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -39,6 +44,13 @@ GEM
     coffee-script-source (1.7.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    haml (4.0.3)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -52,6 +64,11 @@ GEM
     mime-types (1.25.1)
     multi_json (1.8.4)
     mysql2 (0.3.15)
+    paperclip (2.8.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -78,11 +95,16 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    remotipart (1.0.5)
+    rmagick (2.13.2)
     sass (3.2.14)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    simple_form (2.0.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -97,15 +119,23 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.2.1)
+  haml-rails
   jquery-rails
   json
   mysql2
+  paperclip (= 2.8.0)
   rails (= 3.2.13)
+  remotipart (~> 1.0)
+  rmagick (= 2.13.2)
   sass-rails (~> 3.2.3)
+  simple_form (= 2.0.2)
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0)
