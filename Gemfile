@@ -18,6 +18,7 @@ end
 gem 'haml-rails'
 gem 'simple_form', '2.0.2'
 gem 'will_paginate', '~> 3.0'
+gem 'bootstrap-sass', '~> 3.1.0'
 gem 'paperclip', '2.8.0'
 gem 'rmagick', '2.13.2', :require => 'RMagick'
 gem 'remotipart', '~> 1.0'
