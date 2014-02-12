@@ -8,5 +8,6 @@
         %span.icon-bar
       = link_to("Stefan Hagen", :root, :class => "navbar-brand")
     .collapse.navbar-collapse#main_nav
-      %ul.nav.navbar-nav
-        %li.active= link_to("Blog", :root)
+      %ul.nav.navbar-nav 
+        = menu_item(:blog, "home", :blog, menu_active?(:pages, :blog))
+        = menu_item(:about, "user", :about, menu_active?(:pages, :about))
