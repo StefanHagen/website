@@ -37,13 +37,6 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
-    coffee-rails (3.2.2)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.7.0)
     erubis (2.7.0)
     execjs (2.0.2)
     haml (4.0.3)
@@ -129,7 +122,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (~> 3.1.0)
-  coffee-rails (~> 3.2.1)
   haml-rails
   jquery-rails
   json
