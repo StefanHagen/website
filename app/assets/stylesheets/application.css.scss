@@ -19,7 +19,10 @@ $light_gray: #e7e7e7;
 
 // ====================================================================== TYPOGRAPHY
 
-.navbar-brand { font-weight: 300; }
+.navbar-brand {  height: 20px; font-size: 16px; padding: 0px;}
+
+.navbar-nav > li > a {padding-top:7px !important; padding-bottom:7px !important;}
+.navbar {min-height:32px !important}
 
 // ====================================================================== MENU
 
