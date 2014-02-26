@@ -1,0 +1,23 @@
+!!! HTML5
+%head
+  %title Stefan Hagen
+
+  = stylesheet_link_tag("admin/application")
+  = javascript_include_tag("admin/application")
+  = csrf_meta_tags
+
+%body
+
+  %nav.navbar.navbar-inverse.navbar-fixed-top{ :role => "navigation" }
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle{ :type => "button", :data => { :toggle => "collapse", :target => "#main_nav" }}
+          %span.sr-only Toggle navigation
+          Menu
+      .collapse.navbar-collapse#main_nav
+        %ul.nav.navbar-nav 
+          %li= link_to("Blog", [:admin, :posts])
+
+  .row
+    .col-md-12
+      = yield

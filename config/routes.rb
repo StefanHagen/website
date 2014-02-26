@@ -2,6 +2,10 @@ Website::Application.routes.draw do
 
   namespace :admin do
 
+    get "login"  => "sessions#new",     :as => :login
+    post "login" => "sessions#create",  :as => :login
+    get "logout" => "sessions#destroy", :as => :logout
+
     resources :posts
 
     root :to => "pages#dashboard"

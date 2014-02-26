@@ -6,3 +6,6 @@ en:
     blog: ""
     projects: "Projects"
     about: "About me"
+
+    admin:
+      posts: "Posts"

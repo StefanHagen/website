@@ -1,4 +1,4 @@
-%nav.navbar.navbar-inverse.navbar-fixed-top{ :role => "navigation" }
+%nav.navbar.navbar-default.navbar-fixed-top{ :role => "navigation" }
   .container-fluid
     .navbar-header
       %button.navbar-toggle{ :type => "button", :data => { :toggle => "collapse", :target => "#main_nav" }}
@@ -6,7 +6,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to("Stefan Hagen", :root, :class => "navbar-brand")
+      .brand= link_to("Stefan Hagoisdfhen", :root, :class => "navbar-brand")
     .collapse.navbar-collapse#main_nav
       %ul.nav.navbar-nav 
         = menu_item(:blog, "home", :blog, menu_active?(:pages, :blog))
