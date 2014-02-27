@@ -3,9 +3,19 @@
 
 en:
   menu:
-    blog: ""
+    blog: "Blog"
     projects: "Projects"
     about: "About me"
+    dashboard: "Dashboard"
+    logout: ""
 
-    admin:
-      posts: "Posts"
+    
+
+  # Admin Namespace
+  admin:
+
+    columns:
+      edit: "Edit"
+      delete: "Remove"
+      title: "Title"
+      published_at: "Published at"

@@ -1,5 +1,7 @@
-= form_tag(:admin_login) do
-  = text_field_tag :email, params[:email]
-  = password_field_tag :password, nil
-  = submit_tag
+.row.top-row
+  .col-md-4.offset-md-4
+    = form_tag(:admin_login) do
+      = text_field_tag :email, params[:email]
+      = password_field_tag :password, nil
+      = submit_tag
   

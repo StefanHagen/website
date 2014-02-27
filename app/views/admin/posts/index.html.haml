@@ -1,1 +1,35 @@
-Posts index
+.row
+  .col-md-1
+  .col-md-10
+    %h1.text-center Pages index
+  .col-md-1
+
+.row
+  .col-md-1
+  .col-md-10
+    = link_to("New post", [:new, :admin, :post])
+  .col-md-1
+
+.row
+  .col-md-1
+  .col-md-10
+    %table.table.table-striped
+      %tr
+        %th= t("admin.columns.edit")
+        %th= t("admin.columns.delete")
+        %th= t("admin.columns.title")
+        %th= t("admin.columns.published_at")
+  
+      - @posts.each do |post|
+        %tr
+          %td= link_to("Edit", [:edit, :admin, post])
+          %td= link_to("Remove", [:admin, post], :confirm => "Are you sure you want to delete this post?", :method => :delete)
+          %td= post.title
+          %td= post.updated_at
+  .col-md-1
+
+.row
+  .col-md-1
+  .col-md-10 
+    = will_paginate @posts
+  .col-md-1

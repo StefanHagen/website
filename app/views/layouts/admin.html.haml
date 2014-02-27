@@ -4,20 +4,30 @@
 
   = stylesheet_link_tag("admin/application")
   = javascript_include_tag("admin/application")
+
+  %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
   = csrf_meta_tags
 
 %body
 
-  %nav.navbar.navbar-inverse.navbar-fixed-top{ :role => "navigation" }
-    .container-fluid
-      .navbar-header
-        %button.navbar-toggle{ :type => "button", :data => { :toggle => "collapse", :target => "#main_nav" }}
-          %span.sr-only Toggle navigation
-          Menu
-      .collapse.navbar-collapse#main_nav
-        %ul.nav.navbar-nav 
-          %li= link_to("Blog", [:admin, :posts])
+  - if current_admin
+    %nav.navbar.navbar-inverse.navbar-fixed-top{ :role => "navigation" }
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{ :type => "button", :data => { :toggle => "collapse", :target => "#main_nav" }}
+            %span.sr-only Toggle navigation
+            Menu
+        .collapse.navbar-collapse#main_nav
+          %ul.nav.navbar-nav 
+            = menu_item(:dashboard, "dashboard", [:admin, :dashboard], menu_active?(:pages, :dashboard))
+            = menu_item(:blog, "pencil", [:admin, :posts], menu_active?(:posts, :index))
+          %ul.nav.navbar-nav.navbar-right
+            = menu_item(:logout, "off", [:admin, :logout], menu_active?(:sessions, :destroy ))
+  
+    .container-fluid.fixed-menu
+      = yield
 
-  .row
-    .col-md-12
+  - else
+
+    .container-fluid
       = yield
