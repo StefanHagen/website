@@ -8,6 +8,8 @@ Website::Application.routes.draw do
     get "dashboard" => "pages#dashboard", :as => :dashboard
 
     resources :posts
+    resources :projects
+    resources :settings
 
     root :to => "pages#dashboard"
 

@@ -1,6 +1,6 @@
 !!! HTML5
 %head
-  %title Stefan Hagen
+  %title Stefan Hagen / Admin
 
   = stylesheet_link_tag("admin/application")
   = javascript_include_tag("admin/application")
@@ -21,6 +21,8 @@
           %ul.nav.navbar-nav 
             = menu_item(:dashboard, "dashboard", [:admin, :dashboard], menu_active?(:pages, :dashboard))
             = menu_item(:blog, "pencil", [:admin, :posts], menu_active?(:posts, :index))
+            = menu_item(:projects, "folder-open", [:admin, :projects], menu_active?(:projects, :index))
+            = menu_item(:settings, "cog", [:admin, :settings], menu_active?(:settings, :index))
           %ul.nav.navbar-nav.navbar-right
             = menu_item(:logout, "off", [:admin, :logout], menu_active?(:sessions, :destroy ))
   
