@@ -18,5 +18,7 @@ en:
     columns:
       edit: "Edit"
       delete: "Remove"
+      actions: ""
+      published: "Published"
       title: "Title"
       published_at: "Published at"

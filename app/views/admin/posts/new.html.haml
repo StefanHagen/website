@@ -1,7 +1,10 @@
-.row
+.row.padded-bottom.padded-top
   .col-md-1
   .col-md-10
-    %h1.text-center New Post
+    %ol.breadcrumb
+      %li= link_to("Dashboard", [:admin, :dashboard])
+      %li= link_to("Blog", [:admin, :posts])
+      %li= "New Post"
   .col-md-1
 
 .row

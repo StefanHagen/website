@@ -17,14 +17,31 @@
 
 // ====================================================================== TYPOGRAPHY
 
+h1.blogpost { padding-bottom: 20px; }
+pre.prettyprint { margin: 20px auto; }
+
 // ====================================================================== STRUCTURE
 
 .container-fluid.fixed-menu { padding-top: 60px; }
+
+.row.padded-bottom { padding-bottom: 20px; }
+.row.padded-top { padding-top: 30px; }
+
+.panel { margin-top: 30px; }
 
 // ====================================================================== MENU
 
 ul.nav.navbar-nav li a span.glyphicon { margin-right: 10px; }
 
+// ====================================================================== BREADCRUMBS
+
 // ====================================================================== OVERVIEW TABLES
+
+table.overview-table {
+  tbody tr td { vertical-align: middle; }
+  tbody tr td.actions-2 { width: 101px; }
+  tbody tr td.timestamp { width: 185px; }
+  tbody tr td.boolean { width: 30px; }
+}
 
 // ====================================================================== FORMS

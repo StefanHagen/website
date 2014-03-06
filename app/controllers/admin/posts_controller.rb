@@ -2,7 +2,7 @@ class Admin::PostsController < AdminController
   before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.paginate(:page => params[:page])
+    @posts = Post.latest_created.paginate(:page => params[:page])
   end
 
   def show

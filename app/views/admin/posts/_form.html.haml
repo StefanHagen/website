@@ -1,4 +1,17 @@
 = simple_form_for([:admin, @post]) do |f|
-  = f.input :title
-  = f.input :body
-  = f.submit
+  .row.padded-bottom
+    .col-md-12
+      .input-group
+        %span.input-group-addon Title
+        = f.input :title, :label => false
+  .row.padded-bottom
+    .col-md-12
+      = f.input :body, :label => false
+      
+  .row.padded-bottom
+    .col-md-12
+      = link_to([:admin, :posts]) do
+        %button.btn.btn-default{ :type => "button" }
+          Cancel
+      %button.btn.btn-success{ :type => "submit" }
+        Save Post

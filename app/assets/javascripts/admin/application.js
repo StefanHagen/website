@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+
+  // Activate submit on clicking checkboxes
+  activateCheckboxForms();
+
+  // Activate syntax highlighting
+  activateSyntaxHighlighting();
+
+});
+
+function activateCheckboxForms(){
+  $(".published").click(function(){
+    $(this).parent().submit();
+  });
+}
+
+function activateSyntaxHighlighting(){
+  $("pre").addClass("prettyprint");
+}

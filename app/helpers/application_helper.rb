@@ -18,4 +18,10 @@ module ApplicationHelper
     end
   end
 
+  # Render markdown to HTML
+  def markdown(text)
+    raw(BlueCloth::new(text).to_html)
+  end
+  alias :md :markdown
+
 end

@@ -10,7 +10,6 @@ class Admin::SessionsController < AdminController
       session[:admin_id] = admin.id
       redirect_to([:admin, :root], :gflash => :success)
     else
-      gflash :error
       render :new
     end
   end
