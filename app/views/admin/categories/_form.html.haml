@@ -1,0 +1,18 @@
+= simple_form_for([:admin, @category]) do |f|
+  .row.padded-bottom
+    .col-md-6
+      .input-group
+        %span.input-group-addon Name
+        = f.input :name, :label => false
+    .col-md-6
+      .input-group
+        %span.input-group-addon Key
+        = f.input :key, :label => false
+
+  .row.padded-bottom
+    .col-md-12
+      = link_to([:admin, :categories]) do
+        %button.btn.btn-default{ :type => "button" }
+          Cancel
+      %button.btn.btn-success{ :type => "submit" }
+        Save Category

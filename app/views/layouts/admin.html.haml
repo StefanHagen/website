@@ -22,6 +22,7 @@
           %ul.nav.navbar-nav 
             = menu_item(:dashboard, "dashboard", [:admin, :dashboard], menu_active?(:pages, :dashboard))
             = menu_item(:blog, "pencil", [:admin, :posts], menu_active?(:posts, :index))
+            = menu_item(:categories, "th-list", [:admin, :categories], menu_active?(:categories, :index))
             = menu_item(:projects, "folder-open", [:admin, :projects], menu_active?(:projects, :index))
             = menu_item(:settings, "cog", [:admin, :settings], menu_active?(:settings, :index))
           %ul.nav.navbar-nav.navbar-right

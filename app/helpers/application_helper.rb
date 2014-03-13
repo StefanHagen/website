@@ -24,4 +24,9 @@ module ApplicationHelper
   end
   alias :md :markdown
 
+  # Render timestamp in readable formats
+  def ts_descriptive(timestamp)
+    timestamp.strftime("%e %B %Y %H:%M")
+  end
+
 end

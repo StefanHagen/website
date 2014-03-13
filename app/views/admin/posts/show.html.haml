@@ -1,0 +1,42 @@
+.row.padded-top
+  .col-md-1
+  .col-md-9
+    %ol.breadcrumb
+      %li= link_to("Dashboard", [:admin, :dashboard])
+      %li= link_to("Blog", [:admin, :posts])
+      %li= @post.title
+  .col-md-1
+    = link_to([:edit, :admin, :post]) do
+      %button.btn.btn-warning.pull-right{ :type => "button" }
+        Edit Post
+  .col-md-1
+
+.row.padded-bottom
+  .col-md-1
+  .col-md-7
+    %h1.blogpost= @post.title
+    = md(@post.body)
+  .col-md-3
+    .panel.panel-info
+      .panel-heading
+        %h3.panel-title Blogpost Metadata
+      .panel-body
+        %strong
+          %span.glyphicon.glyphicon-time
+          = "Created at: "
+          = ts_descriptive(@post.created_at)
+        %br
+        %br
+        %strong
+          %span.glyphicon.glyphicon-time
+          = "Updated at: "
+          = ts_descriptive(@post.updated_at)
+        %br
+        %br
+        %strong
+          %span.glyphicon.glyphicon-flag
+          = "Published: "
+          = @post.published
+        %br
+        %br
+  .col-md

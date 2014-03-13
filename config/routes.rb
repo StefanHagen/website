@@ -7,7 +7,10 @@ Website::Application.routes.draw do
     get "logout" => "sessions#destroy", :as => :logout
     get "dashboard" => "pages#dashboard", :as => :dashboard
 
-    resources :posts
+    resources :posts do
+      resources :categoeries
+    end
+    resources :categories
     resources :projects
     resources :settings
 

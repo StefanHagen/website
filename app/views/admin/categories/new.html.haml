@@ -1,0 +1,14 @@
+.row.padded-bottom.padded-top
+  .col-md-1
+  .col-md-10
+    %ol.breadcrumb
+      %li= link_to("Dashboard", [:admin, :dashboard])
+      %li= link_to("Categories", [:admin, :categories])
+      %li= "New Category"
+  .col-md-1
+
+.row
+  .col-md-1
+  .col-md-10
+    = render("form")
+  .col-md-1

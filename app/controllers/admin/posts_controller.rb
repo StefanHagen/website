@@ -15,6 +15,7 @@ class Admin::PostsController < AdminController
   
   def create
     @post = Post.new(params[:post])
+    @post.administrator_id = current_admin.id
     if @post.save
       redirect_to([:admin, :posts])
     else
